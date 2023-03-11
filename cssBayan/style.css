@@ -36,14 +36,6 @@ h3 {
     transition: 0.4s;
   }
 
-.wrapper:hover h3{
-    color: black;
-}
-
-.wrapper:hover .icon {
-    opacity: 1;
-  }
-
 .wrapper {
     max-width: 90%;
     padding: 5%;
@@ -68,9 +60,19 @@ h3 {
     cursor: pointer;
 }
 
+@media (hover: hover) {
 .accordion-item-trigger:hover .icon{
     transform: rotate(45deg);
   }
+
+.wrapper:hover h3{
+    color: black;
+}
+
+.wrapper:hover .icon {
+    opacity: 1;
+}
+}
 
 .accordion-pic {
     width: 50%;
