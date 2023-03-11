@@ -1,0 +1,91 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+html,body {
+    height:100%;
+    width:100%;
+    padding: 5%;
+    font-family: Arial, Helvetica, sans-serif;
+    scroll-behavior: smooth;
+}
+
+h3 {
+    color: #6868c7;
+}
+
+.icon {
+    opacity: 0;
+    background-image: url("pics/open.png");
+    width: 1em;
+    height: 1em;
+    background-size: 1em 1em;
+    transform: rotate(0deg);
+    transition: .5s;
+}
+
+.wrapper:hover h3{
+    color: black;
+}
+
+.wrapper:hover .icon {
+    opacity: 1;
+  }
+
+.wrapper {
+    max-width: 90%;
+    padding: 5%;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.accordion-item {
+    cursor: pointer;
+}
+
+.accordion-item-input {
+position: absolute;
+top: 0;
+left: 0;
+opacity: 0;
+}
+
+.accordion-item-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 2% 1%;
+    border-top: 1px solid black;
+    cursor: pointer;
+}
+
+.accordion-item-content {
+  height: 0;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+p{
+    text-align: center;
+}
+
+.accordion-item-pic {
+    width: 60%;
+}
+
+.accordion-item-input:checked ~ .accordion-item-content {
+    margin: 1% 0;
+    height: 18em;
+}
+
+.accordion-item-input:checked ~ .accordion-item-trigger .icon {
+  transform: rotate(45deg);
+}
+
+.accordion-item-input:checked ~ .accordion-item-trigger h3 {
+    color: black;
+}
+
+
