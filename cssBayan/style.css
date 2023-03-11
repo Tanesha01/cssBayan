@@ -61,10 +61,6 @@ h3 {
 }
 
 @media (hover: hover) {
-.accordion-item-trigger:hover .icon{
-    transform: rotate(45deg);
-  }
-
 .wrapper:hover h3{
     color: black;
 }
@@ -72,6 +68,23 @@ h3 {
 .wrapper:hover .icon {
     opacity: 1;
 }
+
+.accordion-item-input:not(:checked) ~ .accordion-item-trigger:hover ~ .accordion-item-content {
+    height: 18em;
+}
+
+.accordion-item-input:not(:checked) ~ .accordion-item-trigger:hover ~ .icon{
+    transform: rotate(45deg);
+  }
+
+.accordion-item-trigger:hover .icon{
+    transform: rotate(45deg);
+  }
+    
+.accordion-item-content:hover {
+    height: 18em;
+}
+
 }
 
 .accordion-pic {
@@ -201,6 +214,4 @@ p{
         height: 18em;
     }
 }
-
-
 
